@@ -95,33 +95,17 @@ return updatedTimes;
       <div>
         {screen === "initial" && (
           <>
-            <h1 style={{ fontSize: "36px", marginBottom: "20px" }}>REACTION TEST</h1>
+            <h1 className="text-3xl mb-4">REACTION TEST</h1>
             <p>{message}</p>
           </>
         )}
         {screen !== "initial" && <p>{message}</p>}
 
-        {screen === "blue" && reactionTimes.length < 5 && (
-          <button
-            onClick={() => startTest()}
-            style={{
-              margin: "20px",
-              padding: "10px 20px",
-              backgroundColor: "white",
-              color: "black",
-              border: "none",
-              cursor: "pointer",
-              borderRadius: "5px",
-            }}
-          >
-            Try Again
-          </button>
-        )}
-
-        {screen === "results" && (
+       {screen === "results" && (
           <div>
             <h2>{message}</h2>
             <button
+            // className="m-4 h-[40px] w-[50px] bg-white text-black cursor-pointer"
               onClick={resetTest}
               style={{
                 margin: "10px",
@@ -135,7 +119,8 @@ return updatedTimes;
             >
               Try Again
             </button>
-            <button
+            <button 
+            // className="m-4 py-10 px-6 bg-white text-black cursor-pointer"
               onClick={() => alert("Score Saved!")}
               style={{
                 margin: "10px",
